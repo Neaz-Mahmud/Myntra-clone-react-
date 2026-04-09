@@ -1,0 +1,88 @@
+/* Container layout to match the product grid */
+.gridContainer {
+    display: grid;
+    /* Adjust the minmax value based on your actual design's breakpoint */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* --- The Shimmer Animation --- */
+@keyframes shimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+/* Base class for all skeleton blocks */
+.skeleton {
+    background: #f6f7f8;
+    background-image: linear-gradient(to right,
+            #f6f7f8 0%,
+            #edeef1 20%,
+            #f6f7f8 40%,
+            #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 100%;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    border-radius: 4px;
+}
+
+/* --- Specific Element Sizing --- */
+
+.image {
+    width: 100%;
+    /* Using an aspect ratio that roughly matches your apparel/jewelry photos */
+    aspect-ratio: 4 / 5;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.text {
+    height: 14px;
+}
+
+/* Simulates the short rating line (e.g., "4.5 | 1400") */
+.rating {
+    width: 30%;
+}
+
+/* Simulates the bold brand name (e.g., "$Carlton London") */
+.brand {
+    width: 50%;
+    height: 18px;
+}
+
+/* Simulates the longer product description */
+.description {
+    width: 90%;
+}
+
+/* Simulates the price line */
+.price {
+    width: 65%;
+    margin-bottom: 4px;
+}
+
+/* Simulates the green 'Add to Bag' button */
+.button {
+    width: 100%;
+    height: 36px;
+    border-radius: 6px;
+    margin-top: auto;
+    /* Pushes the button to the bottom if cards stretch */
+}

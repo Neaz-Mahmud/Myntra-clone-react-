@@ -7,14 +7,16 @@ const itemslice = createSlice(
 
     {
         name: "items",
-        initialState: defaultitems,
+        initialState: [],
         reducers: {
             addIntialitems: (store, action) => {
-                return store;
+                console.log(action.payload);
+                return action.payload[0];
             }
         }
     }
 );
 
+export const Allitemsliceactions = itemslice.actions;
 export default itemslice;
 
