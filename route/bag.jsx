@@ -6,7 +6,6 @@ import Header from "../component/header";
 const Bag = () => {
   return (
     <>
-
       <main>
         <div className="bag-page">
           <div className="bag-items-container">
@@ -18,7 +17,6 @@ const Bag = () => {
           </div>
         </div>
       </main>
-
     </>
   );
 };
